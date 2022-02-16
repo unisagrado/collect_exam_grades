@@ -158,7 +158,7 @@ class ENEMScrap:
 
     def last_requested_today(self, driver, time):
         last_request = driver.find_element_by_xpath(
-            "//table[@id='listaSolicitacaoAtendidas']//tbody[@id='listaSolicitacaoAtendidas:tb']//tr[contains(@class,'rich-table-firstrow')]//td[@id='listaSolicitacaoAtendidas:0:j_id165']/div")
+            "//table[@id='listaSolicitacaoAtendidas']//tbody[@id='listaSolicitacaoAtendidas:tb']//tr[contains(@class,'rich-table-firstrow')]//td[@id='listaSolicitacaoAtendidas:0:j_id170']/div")
         last_request_date = datetime.strptime(
             last_request.text, '%d/%m/%Y %H:%M:%S')
         return last_request_date.time() >= time.time()
